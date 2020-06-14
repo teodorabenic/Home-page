@@ -1,0 +1,235 @@
+* {box-sizing: border-box}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+position: relative;
+background-color:rgb(238, 229, 229);
+}
+/* Set backgrounds on sliders*/
+#slider1{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(italianfood1.jpg);
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+#slider2{
+background-image:linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),  url(chinesedood.jpg);
+height: 70vh;
+background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+#slider3{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),  url(mediteranfood.jpg);
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+
+}
+
+/* Animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.new-container{
+  position: absolute;
+  left: 0;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.new-container::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.new{
+  float: left;
+  width: 33.33%;
+  color: #fefefe;
+}
+
+.myBtn{
+  margin: auto;
+  left: 10%;
+  top: 50%;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  display:block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+.myBtn:hover{
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  height: 90%;
+  font-size: 2.3em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close1,.close2,.close3,.close4,.close5,.close6,.close7,.close8 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus,
+.close4:hover,
+.close4:focus,
+.close5:hover,
+.close5:focus,
+.close6:hover,
+.close6:focus,
+.close7:hover,
+.close7:focus,
+.close8:hover,
+.close8:focus
+ {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.v-modal-header{
+  padding: 30x 16px;
+  background-color:#245366;
+  color: white;
+}
+
+.modal-header {
+  padding: 30px 100px;
+  background-color:#245366;
+  color: white;
+}
+.l-modal-header{
+  padding: 30x 16px;
+  background-color:#245366;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+img{
+  cursor: pointer;
+}
